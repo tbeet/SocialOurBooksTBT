@@ -1,0 +1,22 @@
+package com.tbeet.ourbooks.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.tbeet.ourbooks.models.Usuario;
+import com.tbeet.ourbooks.services.UsuarioServices;
+
+@RestController
+public class CreateAccountController {
+	
+	@Autowired
+	private UsuarioServices usuarioService;
+	
+	
+	public ResponseEntity<Usuario> createAccount(Usuario usuario){
+		Usuario account = usuarioService.crearCuenta(usuario);
+		return
+	}
+
+}

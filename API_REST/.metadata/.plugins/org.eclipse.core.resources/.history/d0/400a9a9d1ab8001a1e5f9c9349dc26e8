@@ -1,0 +1,34 @@
+package com.tbeet.ourbooks;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.User.UserBuilder;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+@Configuration
+public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
+
+	//registrar password encode por defecto
+	
+	@Bean
+	public BCryptPasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+	
+	public void configureGlobal(AuthenticationManagerBuilder builder) {
+		
+		PasswordEncoder encoder = passwordEncoder();
+		
+		/* aqui es donde se va a encriptar la contraseña y se retorna el resultado de esa encriptacion, es decir 
+		lo que se va a guardar en la bd*/
+		
+		/*
+		UserBuilder users = _User.builder().passwordEncoder(password -> {
+			return encoder.encode(password);
+		});*/
+	}
+}

@@ -1,0 +1,5 @@
+package com.tbeet.ourbooks;
+
+public class SpringSecurityConfig {
+
+}

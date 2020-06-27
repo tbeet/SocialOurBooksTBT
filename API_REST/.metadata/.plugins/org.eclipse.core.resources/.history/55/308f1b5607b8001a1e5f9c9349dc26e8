@@ -1,0 +1,5 @@
+
+spring.datasource.url=jdbc:sqlserver://localhost;databaseName=prueba
+spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring.datasource.username=sa
+spring.datasource.password=password-1

@@ -1,0 +1,28 @@
+package com.tbeet.ourbooks.services;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.tbeet.ourbooks.models.Usuario;
+import com.tbeet.ourbooks.repository.IUsuarioRepository;
+
+@Service
+public class UsuarioServices {
+
+	@Autowired
+	private IUsuarioRepository repoUsuario;
+
+	public List<Usuario> getAllUs() {
+		Iterable<Usuario> users = repoUsuario.findAll();
+		List<Usuario> list = new ArrayList<Usuario>();
+		users.forEach(list::add);
+		return list;
+	}
+
+	public Usuario crearCuenta(Usuario usuario) {
+		return repoUsuario.save(usuario);
+	}
+}

@@ -1,0 +1,24 @@
+package com.tbeet.ourbooks.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.tbeet.ourbooks.models.Usuario;
+import com.tbeet.ourbooks.repository.IUsuarioRepository;
+
+@Service
+public class UsuarioServices {
+
+	@Autowired
+	private IUsuarioRepository repoUsuario;
+	
+	
+	public Usuario getUsuario(int idUsuario) {
+		return repoUsuario.findById(idUsuario);
+		
+	}
+
+	public Usuario crearCuenta(Usuario usuario){
+		return repoUsuario.save(usuario);
+	}
+}
