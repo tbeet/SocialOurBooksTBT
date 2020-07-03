@@ -22,8 +22,8 @@ class TbtApiRestOurbooksApplicationTests {
 	@Test
 	void crearUsuyarioTest() {
 		Usuario user = new Usuario();
-		user.setIdUsuario(1);
-		user.setNombreUsuario("and9925");
+		user.setIdUsuario(10);
+		user.setNombreUsuario("and9927565");
 		user.setNombres("andres");
 		user.setApellidos("vega");
 		user.setCorreo(("and9925@gma00il.com"));

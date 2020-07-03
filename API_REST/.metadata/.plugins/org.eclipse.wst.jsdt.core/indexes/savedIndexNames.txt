@@ -1,2 +1,0 @@
-INDEX VERSION 1.4+/home/andres/MEGA/FUENTES_TBT_OURBOOKS/API_REST/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-2242115381.index

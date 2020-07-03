@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">OurBooksPrototype</string>
+
+    <string-array name="countrys">
+        <item name="">Chose Country</item>
+        <item name="">Colombia</item>
+        <item name="">Peru</item>
+    </string-array>
+</resources>
