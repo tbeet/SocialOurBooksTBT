@@ -56,7 +56,7 @@
                     android:src="@drawable/usrusr"
                     android:layout_gravity="center"/>
                 <EditText
-                    android:id="@+id/usrusr"
+                    android:id="@+id/usrNamePerf"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Username"
@@ -85,7 +85,7 @@
                     android:src="@drawable/usrusr"
                     android:layout_gravity="center"/>
                 <EditText
-                    android:id="@+id/usrnames"
+                    android:id="@+id/usrNames"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Names"
@@ -114,7 +114,7 @@
                     android:src="@drawable/usrusr"
                     android:layout_gravity="center"/>
                 <EditText
-                    android:id="@+id/usrlastnames"
+                    android:id="@+id/usrLastNames"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Last Names"
@@ -139,7 +139,7 @@
                     android:layout_gravity="center"/>
 
                 <Spinner
-                    android:id="@+id/countrys"
+                    android:id="@+id/spinnerCountrys"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
@@ -179,7 +179,8 @@
                     android:textColor="#fff"
                     />
             </LinearLayout>
-            <LinearLayout
+
+           <!-- <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#4a5a71"></LinearLayout>
@@ -206,12 +207,12 @@
                     android:inputType="number"
                     android:textColor="#fff"
                     />
-            </LinearLayout>
+            </LinearLayout>-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#4a5a71"></LinearLayout>
-        </LinearLayout>
+        </LinearLayout>-->
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -222,7 +223,7 @@
         android:gravity="bottom"
         android:layout_marginBottom="20dp">
         <TextView
-            android:id="@+id/linkCreatAccount"
+            android:id="@+id/btnCreatAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#009a9a"
@@ -239,7 +240,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-
             android:text="Already have an Account ?"
             android:textColor="#d9e5f3"
             android:letterSpacing="0.1"/>
