@@ -10,6 +10,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        btnIniciarSesion.setOnClickListener(){
+            val actDashboard = Intent(this, dashboard::class.java)
+            startActivity(actDashboard)
+        }
+
         linkCreatAccount.setOnClickListener{
             val actCreatAccount = Intent(this, CreateAccount::class.java)
             startActivity(actCreatAccount)

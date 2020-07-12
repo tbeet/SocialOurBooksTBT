@@ -1,5 +1,6 @@
 package ourbooks.tbt.ourbooksprototype
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,6 +21,12 @@ class CreateAccount : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_account)
+
+        //devolver a la pantalla principal
+        linkInicioApp.setOnClickListener(){
+            val actMain = Intent(this, MainActivity::class.java)
+            startActivity(actMain)
+        }
 
         var pais: String = ""
         spinnerCountrys.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
