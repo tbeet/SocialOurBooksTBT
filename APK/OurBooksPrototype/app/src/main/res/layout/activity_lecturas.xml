@@ -6,10 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".lecturas">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:nestedScrollingEnabled="true">
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewLecturas"
         android:layout_width="409dp"
         android:layout_height="729dp"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp" />
+        tools:layout_editor_absoluteY="1dp"
+        android:nestedScrollingEnabled="true"
+        />
+    </ScrollView>
 </androidx.appcompat.widget.LinearLayoutCompat>

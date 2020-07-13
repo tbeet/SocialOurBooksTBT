@@ -1,17 +1,24 @@
 package ourbooks.tbt.ourbooksprototype.adapters
 
+import android.os.Build
+import android.transition.AutoTransition
+import android.transition.TransitionManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.annotation.RequiresApi
+import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import ourbooks.tbt.ourbooksprototype.R
 import ourbooks.tbt.ourbooksprototype.models.Post
 
 
 //al exteneder a calse de ReciclerView nos pide un ViewHolder, y se le pasa la otra clase interna que se creo
-class MyAdapter (private val mDataSet: ArrayList<Post>)
-    : RecyclerView.Adapter<MyAdapter.ViewHolder>(){
+class AdpaterPost (private val mDataSet: ArrayList<Post>)
+    : RecyclerView.Adapter<AdpaterPost.ViewHolder>(){
 
 
     //crear una clase dentro de otra clase, esta clase se va a pasar como atributo a la clase principal en la extension de ReciclerView
@@ -20,27 +27,33 @@ class MyAdapter (private val mDataSet: ArrayList<Post>)
         // en este metodo se reciben los datos que va a tener la vista
         fun bindItems(data:Post){
 
+
             //crear variables del tipo correspondiente
-            val tituloPost:TextView = itemView.findViewById(R.id.tituloPost)
-            val nombreAutor:TextView = itemView.findViewById(R.id.nombreAutor)
-            val contenido:EditText = itemView.findViewById(R.id.contenido)
-            val btnGuardar:Button = itemView.findViewById(R.id.btnGuardar)
-            val btnCalificar:Button = itemView.findViewById(R.id.btnCalificar)
+            var expandableView: ConstraintLayout = itemView.findViewById(R.id.constraintLayout2)
+            var scrollView: ScrollView = itemView.findViewById(R.id.scrollContenido)
+            val tituloPost:TextView = itemView.findViewById(R.id.txtTituloPost)
+            val nombreAutor:TextView = itemView.findViewById(R.id.txtNombreUsuario)
+            val contenido:TextView = itemView.findViewById(R.id.txtContenido)
+            val btnMostrarContenido: Button = itemView.findViewById(R.id.btnMostrarContenido)
 
             tituloPost.text = data.titulo
             nombreAutor.text  = data.nombreAutor
             contenido.setText(data.contenido)
-            contenido.setEnabled(false)
-            btnGuardar.setOnClickListener(){
+            //contenido.setEnabled(false)
 
-            }
 
-            itemView.setOnClickListener{
-                //val toast = Toast.makeText(this,"msj",Toast.LENGTH_LONG).show()
-                print("boton guardar")
-            }
+            /*
+            btnMostrarContenido.setOnClickListener(View.OnClickListener {
+                @RequiresApi(Build.VERSION_CODES.KITKAT)
+                fun onClick(v: View){
+                    if(expandableView.visibility == View.GONE){
+                        TransitionManager.beginDelayedTransition(scrollView, AutoTransition())
+                        expandableView.isVisible() = true
+                    }
+                }
+            })*/
 
-            //aqui se hace la l,ogica de los botones, comun y corriente
+
 
         }
 
@@ -62,7 +75,7 @@ class MyAdapter (private val mDataSet: ArrayList<Post>)
     }
 
     //retornamos el viewholder, llamando a la funcion que se creo "bindItems"
-    override fun onBindViewHolder(holder: MyAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AdpaterPost.ViewHolder, position: Int) {
         //agregamos el objeto que se recibe e indicamos la posición del array
         holder.bindItems(mDataSet[position])
     }

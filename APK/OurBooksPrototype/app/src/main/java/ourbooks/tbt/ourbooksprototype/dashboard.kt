@@ -14,5 +14,10 @@ class dashboard : AppCompatActivity() {
             val actLeer = Intent(this, lecturas::class.java)
             startActivity(actLeer)
         }
+
+        btnEscribir.setOnClickListener(){
+            val actEscribir = Intent(this, CrearPost::class.java)
+            startActivity(actEscribir)
+        }
     }
 }
