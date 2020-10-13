@@ -1,0 +1,17 @@
+.login-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .input-form-login{
+    width: 100%;
+  }
+
+  .mat-card-login{
+    margin: auto;
+    width: max-content;
+    display: block;
+    margin-top: 5rem;
+    background: #C5C4D5;
+  }

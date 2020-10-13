@@ -1,0 +1,38 @@
+<mat-toolbar style="background: #1883ba;">    
+    <div style="display: inline; margin-top: 1rem;">      
+        <button type="button" mat-button (click)="drawer.toggle()" style="display: inline;">
+            <mat-icon>menu</mat-icon>
+        </button>            
+        
+    </div>
+    <h1 style="text-align: center; color: azure; font-size: xx-large; font-style: italic; padding: 1rem; display: inline;"> TBEET 2020 - Bookstore Online</h1>
+  
+</mat-toolbar>
+
+
+<mat-drawer-container class="contenedor-barra-lateral-izq" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <mat-accordion>          
+            <!-- #enddocregion basic-panel -->
+              <mat-expansion-panel >
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Generos literarios
+                  </mat-panel-title>                  
+                </mat-expansion-panel-header>
+                <p>Terror</p>
+                <p>Drama</p>
+                <p>Romance</p>                
+              </mat-expansion-panel>
+              <mat-expansion-panel >
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Crear Contenido
+                  </mat-panel-title>                  
+                </mat-expansion-panel-header>         
+                <p>Libros</p>
+                <p>Fabulas</p>                
+              </mat-expansion-panel>
+            </mat-accordion>   
+    </mat-drawer>    
+</mat-drawer-container>
